@@ -1,0 +1,39 @@
+<form class="ui stacked segment form" action="/station/{{../station.id}}/addreading" method="POST">
+  <h3 class="ui header">
+    Add a Reading
+  </h3>
+  <div class="two fields">
+    <div class="field">
+      <label>Weather Code</label>
+      <select class="ui dropdown" name="code" required>
+        <option value="">Select</option>
+        <option value="100">100</option>
+        <option value="200">200</option>
+        <option value="300">300</option>
+        <option value="400">400</option>
+        <option value="500">500</option>
+        <option value="600">600</option>
+        <option value="700">700</option>
+        <option value="800">800</option>
+      </select>
+    </div>
+    <div class="field">
+      <label>Temperature (C)</label>
+      <input placeholder="Temperature (in C)" min="-40" max="60" type="number" step="0.1" name="temperature" required>
+    </div>
+    <div class="field">
+      <label>Wind Speed</label>
+      <input placeholder="Wind Speed in Km/h" type="number" step="0.1" min="0" name="windSpeed" required>
+    </div>
+    <div class="field">
+      <label>Wind Direction</label>
+      <input placeholder="Wind Direction in Degrees" type="number" min="0" max="360" step="0.1" name="windDirection" required>
+    </div>
+    <div class="field">
+      <label>Pressure</label>
+      <input placeholder="Pressure in hPa" type="number" min="800" max="1300" step="1" name="pressure" required>
+    </div>
+  </div>
+  <button class="ui submit button">Add Reading</button>
+  <div class="ui error message"></div>
+</form>

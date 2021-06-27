@@ -1,0 +1,64 @@
+<div class="ui two stackable cards">
+  <div class="card">
+    <div class="content">
+      <div class="header">Station Name <i class="map marker alternate big icon"></i></div>
+    </div>
+    <div class="content">
+      <p>Lat: {{latitude}} </p>
+      <p>Long: {{longitude}} </p>
+    </div>
+  </div>
+  <div class="card">
+    <div class="content">
+      <div class="header">Weather <i class="{{currentIcon}}"></i></div>
+    </div>
+    <div class="content">
+      <p>{{weatherLabel}}</p>
+    </div>
+  </div>
+</div>
+<div class="ui three stackable cards">
+  <div class="card">
+    <div class="content">
+      <div class="header">Temp <i class="thermometer big icon"></i></div>
+    </div>
+    <div class="content">
+      <p>{{temperature}} C</p>
+      <p>{{temperatureFahrenheit}} F</p>
+      <p>Max: {{maxTemp}} C</p>
+      <p>Min: {{minTemp}} C</p>
+      {{# if trendPossible}}
+      <p>Trend: {{tempTrend}} <i class="arrow {{tempTrendIcon}} icon"></i></p>
+      {{/if}}
+    </div>
+  </div>
+  <div class="card">
+    <div class="content">
+      <div class="header">Wind <i class="wind big icon"></i></div>
+    </div>
+    <div class="content">
+      <p>{{beaufort}} bft</p>
+      <p>{{beaufortLabel}}</p>
+      <p>{{windDirectionLabel}}</p>
+      <p>Feels like: {{windChill}} C</p>
+      <p>Max: {{maxWindSpeed}} Km/h</p>
+      <p>Min: {{minWindSpeed}} Km/h</p>
+      {{# if trendPossible}}
+        <p>Trend: {{windTrend}} <i class="arrow {{windTrendIcon}} icon"></i></p>
+      {{/if}}
+    </div>
+  </div>
+  <div class="card">
+    <div class="content">
+      <div class="header">Pressure <i class="compress arrows alternate big icon"></i></div>
+    </div>
+    <div class="content">
+      <p>{{pressure}} hPa</p>
+      <p>Max: {{maxPressure}} hPa</p>
+      <p>Min: {{minPressure}} hPa</p>
+      {{# if trendPossible}}
+        <p>Trend: {{pressureTrend}} <i class="arrow {{pressureTrendIcon}} icon"></i></p>
+      {{/if}}
+    </div>
+  </div>
+</div>

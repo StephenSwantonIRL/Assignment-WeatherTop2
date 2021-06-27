@@ -1,0 +1,13 @@
+{{> menu id="dashboard"}}
+
+<section class="ui segment">
+  <h2 class="ui header">
+    {{name}}
+  </h2>
+  {{#if hasreading}}
+   {{< latestreading }}
+  {{/if}}
+  {{< listreadings}}
+  {{< addreading }}
+
+</section>

@@ -1,5 +1,29 @@
 {{> menu id="dashboard"}}
 
-<section class="ui segment">
-  {{> mainpanel}}
-</section>
+
+  <section class="ui segment">
+    {{# if stationsempty}}
+    <h3> You don't have any stations yet. Create one below</h3>
+    {{/if}}
+    {{#each station}}
+    <section class="ui segment">
+      <h2 class="ui header">
+        {{name}}
+      </h2>
+      {{# if readings}}
+        {{> latestreading }}
+        {{> listreadings }}
+      {{/if}}
+
+      <div id="stationactions">
+        <a href="/station/{{stationid}}" class="ui icon button">
+          <i class="icon folder open"></i>
+        </a>
+        <a href="/dashboard/deletestation/{{stationid}}" class="ui icon button">
+          <i class="icon trash"></i>
+        </a>
+      </div>
+    </section>
+    {{/each}}
+  </section>
+{{>addstation }}
