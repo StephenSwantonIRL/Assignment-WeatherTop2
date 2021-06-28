@@ -2,12 +2,13 @@
 
 <section class="ui segment">
   <h2 class="ui header">
+    {{title}}
     {{name}}
   </h2>
-  {{#if hasreading}}
-   {{< latestreading }}
-  {{/if}}
-  {{< listreadings}}
-  {{< addreading }}
+  {{#if readings}}
+    {{> latestreading }}
+    {{/if}}
+  {{> listreadings readings=readings station=station }}
+  {{> addreading }}
 
 </section>
