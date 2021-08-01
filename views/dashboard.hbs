@@ -5,20 +5,20 @@
     {{# if stationsempty}}
     <h3> You don't have any stations yet. Create one below</h3>
     {{/if}}
-    {{#each station}}
+    {{#each stations}}
     <section class="ui segment">
       <h2 class="ui header">
         {{name}}
       </h2>
       {{# if readings}}
-        {{> latestreading }}
+        {{> latestreading latestreading=latestReading latitude=latitude longitude=longitude}}
       {{/if}}
 
       <div id="stationactions">
-        <a href="/station/{{stationid}}" class="ui icon button">
+        <a href="/station/{{id}}" class="ui icon button">
           <i class="icon folder open"></i>
         </a>
-        <a href="/dashboard/deletestation/{{stationid}}" class="ui icon button">
+        <a href="/dashboard/deletestation/{{id}}" class="ui icon button">
           <i class="icon trash"></i>
         </a>
       </div>

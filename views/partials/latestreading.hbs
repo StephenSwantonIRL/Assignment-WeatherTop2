@@ -1,7 +1,7 @@
 <div class="ui two stackable cards">
   <div class="card">
     <div class="content">
-      <div class="header">Station Name <i class="map marker alternate big icon"></i></div>
+      <div class="header">Location <i class="map marker alternate big icon"></i></div>
     </div>
     <div class="content">
       <p>Lat: {{latitude}} </p>
@@ -23,7 +23,7 @@
       <div class="header">Temp <i class="thermometer big icon"></i></div>
     </div>
     <div class="content">
-      <p>{{temperature}} C</p>
+      <p>{{latestReading.temperature}} C</p>
       <p>{{temperatureFahrenheit}} F</p>
       <p>Max: {{maxTemp}} C</p>
       <p>Min: {{minTemp}} C</p>
@@ -53,7 +53,7 @@
       <div class="header">Pressure <i class="compress arrows alternate big icon"></i></div>
     </div>
     <div class="content">
-      <p>{{pressure}} hPa</p>
+      <p>{{latestReading.pressure}} hPa</p>
       <p>Max: {{maxPressure}} hPa</p>
       <p>Min: {{minPressure}} hPa</p>
       {{# if trendPossible}}

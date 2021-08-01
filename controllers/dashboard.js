@@ -1,31 +1,32 @@
 "use strict";
 
 const logger = require("../utils/logger");
+const stationStore = require("../models/station-store.js")
+const uuid = require("uuid")
 
 const dashboard = {
   index(request, response) {
-    logger.info("dashboard rendering");
+    logger.info("dashboard rendering")
+    function anyStations(stations) {
+      if (stations.length === 0) {
+        return 1
+      } else {
+        return 0
+      }
+    }
+
+    let stations = stationStore.getAllStations()
+    for(let i=0; i<stations.length; i++){
+      stations[i].latestReading = stations[i].readings[0]
+    }
     const viewData = {
       title: "WeatherTop V2 Dashboard",
-      station: [
-
-        {
-          readings: {
-            reading: [{
-              value: "name1"
-            }, {
-              value: "name2"
-            }, {
-              value: "name3"
-            }]
-          },
-          name: "Dunmore"
-        }
-      ],
-      stationempty: 0
-    };
-    response.render("dashboard", viewData);
+      stations: stations,
+      stationsempty: anyStations(stationStore.getAllStations())
+    }
+    response.render("dashboard", viewData)
+    logger.info(viewData);
   },
 };
 
-module.exports = dashboard;
+module.exports = dashboard

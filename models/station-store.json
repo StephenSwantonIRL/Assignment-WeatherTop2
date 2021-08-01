@@ -1,0 +1,38 @@
+{
+  "stationCollection":[
+    {
+      "id":"123",
+      "name":"Tramore",
+      "latitude":52.160,
+      "longitude":-7.252,
+      "readings":[
+        {
+          "id":"01",
+          "code":600,
+          "temperature":6.0,
+          "windSpeed":2,
+          "windDirection":200,
+          "pressure":1004,
+          "timestamp":"2021-05-01 15:36:37"
+        }
+      ]
+    },
+    {
+      "id":"321",
+      "name":"Tramore",
+      "latitude":52.160,
+      "longitude":-7.252,
+      "readings":[
+        {
+          "id":"01",
+          "code":600,
+          "temperature":6.0,
+          "windSpeed":2,
+          "windDirection":200,
+          "pressure":1004,
+          "timestamp":"2021-05-01 15:36:37"
+        }
+      ]
+    }
+  ]
+}

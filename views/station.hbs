@@ -2,13 +2,15 @@
 
 <section class="ui segment">
   <h2 class="ui header">
-    {{title}}
-    {{name}}
+    {{station.name}}
+
+
+
   </h2>
-  {{#if readings}}
-    {{> latestreading }}
+  {{#if station.readings}}
+    {{> latestreading latestreading=latestreading latitude=station.latitude longitude=station.longitude }}
     {{/if}}
-  {{> listreadings readings=readings station=station }}
+  {{> listreadings readings=station.readings station=station.id }}
   {{> addreading }}
 
 </section>

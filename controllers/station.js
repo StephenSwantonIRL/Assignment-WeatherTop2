@@ -1,18 +1,21 @@
 "use strict";
 
-const logger = require("../utils/logger");
-
+const logger = require("../utils/logger")
+const stationStore = require("../models/station-store")
+const uuid = require("uuid")
 const station = {
   index(request, response) {
-    const stationId = request.params.id;
-    logger.info('Station id = ' + stationId);
+    const stationId = request.params.id
+    logger.info('Station id = ' + stationId)
+    const station = stationStore.getStation(stationId)
+    let latestReading = station.readings[0]
     const viewData = {
-      title: 'DunmoreTitle',
-      station: 'station1',
-      readings : [ {id : 1 ,  timestamp : 2020 ,  code : 800 ,  temperature : 36 ,  windSpeed : 40 ,  windDirection : 134 ,  pressure : 900 } , {reading:'reading2'}, {reading:'reading3'}]
-
+      title: 'Station Details',
+      station: stationStore.getStation(stationId),
+      latestReading: latestReading
     }
     response.render('station', viewData);
+    logger.info(viewData);
   },
 };
 
