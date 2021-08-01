@@ -31,6 +31,23 @@ const dashboard = {
     response.render("dashboard", viewData)
     logger.info(viewData);
   },
+  deleteStation(request, response){
+  const stationId = request.params.id
+  logger.debug(`Deleting Station ${stationId}`)
+  stationStore.removeStation(stationId)
+  response.redirect("/dashboard")
+  },
+  addStation(request,response) {
+    const newStation = {
+      id: uuid.v1(),
+      name: request.body.name,
+      latitude: request.body.latitude,
+      longitude: request.body.longitude,
+      readings: []
+    }
+    stationStore.addStation(newStation)
+    response.redirect("/dashboard")
+  }
 };
 
 module.exports = dashboard

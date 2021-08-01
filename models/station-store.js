@@ -19,12 +19,12 @@ const stationStore = {
   },
   removeStation(id){
     const station = this.getStation(id)
-    this.store.removeStation(this.collection, station)
+    this.store.remove(this.collection, station)
     this.store.save()
   },
   addReading(id, reading){
     const station = this.getStation(id)
-    station.reading.push(reading)
+    station.readings.push(reading)
     this.store.save()
   },
   removeReading(id, readingId){

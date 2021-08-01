@@ -10,7 +10,7 @@
   {{#if station.readings}}
     {{> latestreading latestreading=latestreading latitude=station.latitude longitude=station.longitude }}
     {{/if}}
-  {{> listreadings readings=station.readings station=station.id }}
-  {{> addreading }}
+  {{> listreadings readings=station.readings sid=station.id }}
+  {{> addreading sid=station.id }}
 
 </section>

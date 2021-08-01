@@ -1,24 +1,24 @@
 "use strict"
 
 const weatherCodes = new Map()
-weatherCodes.set(100, "Clear")
-weatherCodes.set(200, "Partial Clouds")
-weatherCodes.set(300, "Cloudy")
-weatherCodes.set(400, "Light Showers")
-weatherCodes.set(500, "Heavy Showers")
-weatherCodes.set(600, "Rain")
-weatherCodes.set(700, "Snow")
-weatherCodes.set(800, "Thunder")
+weatherCodes.set("100", "Clear")
+weatherCodes.set("200", "Partial Clouds")
+weatherCodes.set("300", "Cloudy")
+weatherCodes.set("400", "Light Showers")
+weatherCodes.set("500", "Heavy Showers")
+weatherCodes.set("600", "Rain")
+weatherCodes.set("700", "Snow")
+weatherCodes.set("800", "Thunder")
 
 const weatherCodeIcons = new Map()
-weatherCodeIcons.set(100, "sun");
-weatherCodeIcons.set(200, "cloud sun");
-weatherCodeIcons.set(300, "cloud");
-weatherCodeIcons.set(400, "cloud sun rain");
-weatherCodeIcons.set(500, "cloud showers heavy");
-weatherCodeIcons.set(600, "cloud rain");
-weatherCodeIcons.set(700, "snowflake");
-weatherCodeIcons.set(800, "bolt");
+weatherCodeIcons.set("100", "sun");
+weatherCodeIcons.set("200", "cloud sun");
+weatherCodeIcons.set("300", "cloud");
+weatherCodeIcons.set("400", "cloud sun rain");
+weatherCodeIcons.set("500", "cloud showers heavy");
+weatherCodeIcons.set("600", "cloud rain");
+weatherCodeIcons.set("700", "snowflake");
+weatherCodeIcons.set("800", "bolt");
 
 const readingConversions = {
 

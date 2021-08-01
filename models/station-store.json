@@ -1,38 +1,27 @@
 {
-  "stationCollection":[
+  "stationCollection": [
     {
-      "id":"123",
-      "name":"Tramore",
-      "latitude":52.160,
-      "longitude":-7.252,
-      "readings":[
-        {
-          "id":"01",
-          "code":600,
-          "temperature":6.0,
-          "windSpeed":2,
-          "windDirection":200,
-          "pressure":1004,
-          "timestamp":"2021-05-01 15:36:37"
-        }
-      ]
+      "id": "0e3b2df0-f2f9-11eb-98ab-61ba7e90b726",
+      "name": "Stephen's Station",
+      "latitude": "12",
+      "longitude": "12",
+      "readings": [],
+      "latestReading": {
+        "id": "12345",
+        "code": "400",
+        "temperature": "30",
+        "windSpeed": "12",
+        "windDirection": "0",
+        "pressure": "800",
+        "timestamp": "2021-08-01T19:12:36.941Z"
+      }
     },
     {
-      "id":"321",
-      "name":"Tramore",
-      "latitude":52.160,
-      "longitude":-7.252,
-      "readings":[
-        {
-          "id":"01",
-          "code":600,
-          "temperature":6.0,
-          "windSpeed":2,
-          "windDirection":200,
-          "pressure":1004,
-          "timestamp":"2021-05-01 15:36:37"
-        }
-      ]
+      "id": "73e3aac0-f2fd-11eb-9459-87fa6ee04fc7",
+      "name": "Adelle's Station",
+      "latitude": "13",
+      "longitude": "14",
+      "readings": []
     }
   ]
 }

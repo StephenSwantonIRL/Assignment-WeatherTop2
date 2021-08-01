@@ -17,6 +17,32 @@ const station = {
     response.render('station', viewData);
     logger.info(viewData);
   },
+  deleteReading(request, response){
+    const stationId = request.params.id
+    const readingId = request.params.readingId
+    logger.debug(`Deleting Reading ${readingId} from ${stationId}`)
+    stationStore.removeReading(stationId, readingId)
+    response.redirect("/station/"+stationId)
+  },
+  addReading(request, response){
+    const stationId = request.params.id
+    const station = stationStore.getStation(stationId)
+    const timestamp = new Date()
+
+    const newReading = {
+      id : uuid.v1(),
+      code : request.body.code,
+      temperature: request.body.temperature,
+      windSpeed: request.body.windSpeed,
+      windDirection: request.body.windDirection,
+      pressure: request.body.pressure,
+      timestamp: timestamp
+    }
+    logger.debug("New Reading = ", newReading)
+    stationStore.addReading(stationId, newReading)
+    response.redirect("/station/"+stationId)
+  }
+
 };
 
 module.exports = station;
