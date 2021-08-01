@@ -5,6 +5,7 @@ const logger = require("./utils/logger");
 const bodyParser = require("body-parser");
 const cookieParser = require("cookie-parser");
 const fileUpload = require("express-fileupload");
+const readingConversions = require("./utils/readingconversions.js")
 
 const app = express();
 app.use(cookieParser());
@@ -15,9 +16,20 @@ app.use(fileUpload());
 app.engine(
   ".hbs",
   exphbs({
-    extname: ".hbs",
-    defaultLayout: "main"
-  })
+      extname: ".hbs",
+      defaultLayout: "main",
+      helpers: {
+        converttofahrenheit: (temperature) => readingConversions.convertToFahrenheit(temperature),
+        interpretweathercode: (code) => readingConversions.interpretWeatherCode(code),
+        weathericon: (code) => readingConversions.generateWeatherCodeIcon(code),
+        beaufort: (windSpeed) => readingConversions.convertToBeaufort(windSpeed),
+        beaufortlabel: (windSpeed) => "TBC",
+        winddirectionlabel: (windDirection) => readingConversions.directionLabel(windDirection),
+        windchill: (temperature, windSpeed) => readingConversions.calculateWindChill(temperature,windSpeed)
+        }
+      }
+
+  )
 );
 app.set("view engine", ".hbs");
 

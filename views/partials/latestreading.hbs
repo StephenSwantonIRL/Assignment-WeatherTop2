@@ -10,10 +10,10 @@
   </div>
   <div class="card">
     <div class="content">
-      <div class="header">Weather <i class="{{currentIcon}}"></i></div>
+      <div class="header">Weather <i class="big icon {{weathericon latestReading.code}}"></i></div>
     </div>
     <div class="content">
-      <p>{{weatherLabel}}</p>
+      <p>{{interpretweathercode latestReading.code}}</p>
     </div>
   </div>
 </div>
@@ -24,7 +24,7 @@
     </div>
     <div class="content">
       <p>{{latestReading.temperature}} C</p>
-      <p>{{temperatureFahrenheit}} F</p>
+      <p> {{converttofahrenheit latestReading.temperature}} F</p>
       <p>Max: {{maxTemp}} C</p>
       <p>Min: {{minTemp}} C</p>
       {{# if trendPossible}}
@@ -37,10 +37,10 @@
       <div class="header">Wind <i class="wind big icon"></i></div>
     </div>
     <div class="content">
-      <p>{{beaufort}} bft</p>
-      <p>{{beaufortLabel}}</p>
-      <p>{{windDirectionLabel}}</p>
-      <p>Feels like: {{windChill}} C</p>
+      <p>{{beaufort latestReading.windSpeed}} bft</p>
+      <p>{{beaufortlabel latestReading.windSpeed}}</p>
+      <p>{{winddirectionlabel latestReading.windDirection}}</p>
+      <p>Feels like: {{windchill}} C</p>
       <p>Max: {{maxWindSpeed}} Km/h</p>
       <p>Min: {{minWindSpeed}} Km/h</p>
       {{# if trendPossible}}
