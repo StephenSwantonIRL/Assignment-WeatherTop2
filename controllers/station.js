@@ -2,17 +2,26 @@
 
 const logger = require("../utils/logger")
 const stationStore = require("../models/station-store")
+const stationAnalytics = require("../utils/stationanalytics")
 const uuid = require("uuid")
 const station = {
   index(request, response) {
     const stationId = request.params.id
     logger.info('Station id = ' + stationId)
     const station = stationStore.getStation(stationId)
-    let latestReading = station.readings[0]
+    let latestReading = station.readings[station.readings.length-1]
     const viewData = {
       title: 'Station Details',
       station: stationStore.getStation(stationId),
-      latestReading: latestReading
+      latestReading: latestReading,
+      maxAndMins: {
+        maxtemp: stationAnalytics.max(stationAnalytics.allTemps(station.readings)),
+        maxpressure: stationAnalytics.max(stationAnalytics.allPressures(station.readings)),
+        maxwindspeed: stationAnalytics.max(stationAnalytics.allWindSpeeds(station.readings)),
+        mintemp: stationAnalytics.min(stationAnalytics.allTemps(station.readings)),
+        minpressure: stationAnalytics.min(stationAnalytics.allPressures(station.readings)),
+        minwindspeed: stationAnalytics.min(stationAnalytics.allWindSpeeds(station.readings))
+      }
     }
     response.render('station', viewData);
     logger.info(viewData);

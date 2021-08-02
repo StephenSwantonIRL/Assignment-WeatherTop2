@@ -25,8 +25,8 @@
     <div class="content">
       <p>{{latestReading.temperature}} C</p>
       <p> {{converttofahrenheit latestReading.temperature}} F</p>
-      <p>Max: {{maxTemp}} C</p>
-      <p>Min: {{minTemp}} C</p>
+      <p>Max: {{maxAndMins.maxtemp}} C</p>
+      <p>Min: {{maxAndMins.mintemp}} C</p>
       {{# if trendPossible}}
       <p>Trend: {{tempTrend}} <i class="arrow {{tempTrendIcon}} icon"></i></p>
       {{/if}}
@@ -41,8 +41,8 @@
       <p>{{beaufortlabel latestReading.windSpeed}}</p>
       <p>{{winddirectionlabel latestReading.windDirection}}</p>
       <p>Feels like: {{windchill}} C</p>
-      <p>Max: {{maxWindSpeed}} Km/h</p>
-      <p>Min: {{minWindSpeed}} Km/h</p>
+      <p>Max: {{maxAndMins.maxwindspeed}} Km/h</p>
+      <p>Min: {{maxAndMins.minwindspeed}} Km/h</p>
       {{# if trendPossible}}
         <p>Trend: {{windTrend}} <i class="arrow {{windTrendIcon}} icon"></i></p>
       {{/if}}
@@ -54,8 +54,8 @@
     </div>
     <div class="content">
       <p>{{latestReading.pressure}} hPa</p>
-      <p>Max: {{maxPressure}} hPa</p>
-      <p>Min: {{minPressure}} hPa</p>
+      <p>Max: {{maxAndMins.maxpressure}} hPa</p>
+      <p>Min: {{maxAndMins.minpressure}} hPa</p>
       {{# if trendPossible}}
         <p>Trend: {{pressureTrend}} <i class="arrow {{pressureTrendIcon}} icon"></i></p>
       {{/if}}

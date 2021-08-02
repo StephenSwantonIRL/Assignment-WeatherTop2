@@ -31,7 +31,7 @@ const readingConversions = {
 },
 
 convertToFahrenheit(temperature){
-  return (temperature * 1.8 ) +32
+  return (parseFloat(temperature) * 1.8 ) +32
 },
 
   convertToBeaufort(windSpeed){

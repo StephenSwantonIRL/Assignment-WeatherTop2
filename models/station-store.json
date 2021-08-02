@@ -5,23 +5,43 @@
       "name": "Stephen's Station",
       "latitude": "12",
       "longitude": "12",
-      "readings": [],
-      "latestReading": {
-        "id": "12345",
-        "code": "400",
-        "temperature": "30",
-        "windSpeed": "12",
-        "windDirection": "0",
-        "pressure": "800",
-        "timestamp": "2021-08-01T19:12:36.941Z"
-      }
+      "readings": [
+        {
+          "id": "2572a320-f382-11eb-bdf9-9765c41c5f57",
+          "code": "400",
+          "temperature": "59",
+          "windSpeed": "100",
+          "windDirection": "50",
+          "pressure": "1000",
+          "timestamp": "2021-08-02T11:09:46.448Z"
+        },
+        {
+          "id": "1cd7f400-f39a-11eb-b943-279c95ad7f96",
+          "code": "700",
+          "temperature": "0",
+          "windSpeed": "20",
+          "windDirection": "90",
+          "pressure": "801",
+          "timestamp": "2021-08-02T14:01:19.934Z"
+        }
+      ]
     },
     {
       "id": "73e3aac0-f2fd-11eb-9459-87fa6ee04fc7",
       "name": "Adelle's Station",
       "latitude": "13",
       "longitude": "14",
-      "readings": []
+      "readings": [
+        {
+          "id": "b2306000-f39a-11eb-a944-09aa2e2eebf1",
+          "code": "200",
+          "temperature": "30",
+          "windSpeed": "12",
+          "windDirection": "0",
+          "pressure": "850",
+          "timestamp": "2021-08-02T14:05:30.495Z"
+        }
+      ]
     }
   ]
 }
