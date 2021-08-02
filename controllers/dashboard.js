@@ -20,7 +20,7 @@ const dashboard = {
       }
     }
 
-    let stations = _.cloneDeep(stationStore.getUserStations(loggedInUser.id))
+    let stations = _.orderBy(_.cloneDeep(stationStore.getUserStations(loggedInUser.id)), 'name', 'asc')
     for(let i=0; i<stations.length; i++){
       stations[i].latestReading = stations[i].readings[stations[i].readings.length-1]
       stations[i].maxAndMins = {}

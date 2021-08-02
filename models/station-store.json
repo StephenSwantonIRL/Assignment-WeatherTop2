@@ -43,6 +43,32 @@
           "timestamp": "2021-08-02T15:53:03.746Z"
         }
       ]
+    },
+    {
+      "id": "278bcd10-f3ac-11eb-8be5-3df65f07041c",
+      "userid": "3ad52697-6d98-4d80-8273-084de55a86c0",
+      "name": "Bart's Station",
+      "latitude": "32",
+      "longitude": "32",
+      "readings": [
+        {
+          "id": "4297c820-f3ac-11eb-8be5-3df65f07041c",
+          "code": "400",
+          "temperature": "32",
+          "windSpeed": "12",
+          "windDirection": "12",
+          "pressure": "1000",
+          "timestamp": "2021-08-02T16:11:14.210Z"
+        }
+      ]
+    },
+    {
+      "id": "303890b0-f3ac-11eb-8be5-3df65f07041c",
+      "userid": "3ad52697-6d98-4d80-8273-084de55a86c0",
+      "name": "Zena's Station",
+      "latitude": "42",
+      "longitude": "42",
+      "readings": []
     }
   ]
 }
