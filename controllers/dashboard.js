@@ -3,6 +3,7 @@
 const logger = require("../utils/logger");
 const _ = require("lodash")
 const stationStore = require("../models/station-store.js")
+const accounts = require("./accounts.js")
 const readingConversions = require("../utils/readingconversions")
 const stationAnalytics = require("../utils/stationanalytics")
 const uuid = require("uuid")
@@ -10,6 +11,7 @@ const uuid = require("uuid")
 const dashboard = {
   index(request, response) {
     logger.info("dashboard rendering")
+    const loggedInUser = accounts.getCurrentUser(request)
     function anyStations(stations) {
       if (stations.length === 0) {
         return 1
@@ -18,7 +20,7 @@ const dashboard = {
       }
     }
 
-    let stations = _.cloneDeep(stationStore.getAllStations())
+    let stations = _.cloneDeep(stationStore.getUserStations(loggedInUser.id))
     for(let i=0; i<stations.length; i++){
       stations[i].latestReading = stations[i].readings[stations[i].readings.length-1]
       stations[i].maxAndMins = {}
@@ -32,7 +34,7 @@ const dashboard = {
     const viewData = {
       title: "WeatherTop V2 Dashboard",
       stations: stations,
-      stationsempty: anyStations(stationStore.getAllStations())
+      stationsempty: anyStations(stations)
     }
     response.render("dashboard", viewData)
     logger.info(viewData);
@@ -44,8 +46,10 @@ const dashboard = {
   response.redirect("/dashboard")
   },
   addStation(request,response) {
+    const loggedInUser = accounts.getCurrentUser(request)
     const newStation = {
       id: uuid.v1(),
+      userid: loggedInUser.id,
       name: request.body.name,
       latitude: request.body.latitude,
       longitude: request.body.longitude,

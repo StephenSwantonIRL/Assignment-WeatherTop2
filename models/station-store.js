@@ -13,6 +13,10 @@ const stationStore = {
   getStation(id){
     return this.store.findOneBy(this.collection, {id:id})
   },
+
+  getUserStations(userid){
+    return this.store.findBy(this.collection, {userid: userid})
+  },
   addStation(station){
     this.store.add(this.collection, station)
     this.store.save()

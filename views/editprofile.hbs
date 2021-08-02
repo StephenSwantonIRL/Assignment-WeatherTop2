@@ -1,0 +1,90 @@
+{{> menu id="profile"}}
+
+<div class="ui two column grid basic middle aligned segment">
+  <div class="column">
+    <form class="ui stacked segment form" action="/updateprofile" method="POST">
+      <h3 class="ui header">Your Profile Details</h3>
+      <p id="notification">{{notify}}</p>
+      <div class="two fields">
+        <div class="field">
+          <label>First Name</label>
+          <input placeholder="First Name" type="text" name="firstname" value="{{user.firstname}}" required>
+        </div>
+        <div class="field">
+          <label>Last Name</label>
+          <input placeholder="Last Name" type="text" name="lastname" value="{{user.lastname}}" required>
+        </div>
+      </div>
+      <div class="field">
+        <label>Email</label>
+        <input placeholder="Email" type="text" name="email" value="{{user.email}}" required>
+      </div>
+      <div class="field">
+        <label>Password</label>
+        <input type="password" name="password" value="" required>
+      </div>
+      <button class="ui submit button">Submit</button>
+      <div class="ui error message"></div>
+    </form>
+
+
+
+  </div>
+  <div class="column no-padding">
+    <img class="floating-image ui fluid image" src="/images/overview.png">
+  </div>
+</div>
+
+<script>
+  $('.ui.form')
+    .form({
+      fields: {
+        firstname: {
+          identifier: 'firstname',
+          rules: [
+            {
+              type   : 'empty',
+              prompt : 'Please enter your First Name'
+            }
+          ]
+        },
+        lastname: {
+          identifier: 'lastname',
+          rules: [
+            {
+              type   : 'empty',
+              prompt : 'Please enter your Last Name'
+            }
+          ]
+        },
+        email: {
+          identifier: 'email',
+          rules: [
+            {
+              type   : 'empty',
+              prompt : 'Please enter your email address'
+            },
+            {
+              type   : 'email',
+              prompt : 'You must supply a valid email address'
+            }
+          ]
+        },
+        password: {
+          identifier: 'password',
+          rules: [
+            {
+              type   : 'empty',
+              prompt : 'Please enter a password'
+            },
+            {
+              type   : 'minLength[6]',
+              prompt : 'Your password must be at least {ruleValue} characters'
+            }
+          ]
+        },
+      }
+    })
+  ;
+
+</script>

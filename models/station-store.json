@@ -1,47 +1,38 @@
 {
   "stationCollection": [
     {
-      "id": "0e3b2df0-f2f9-11eb-98ab-61ba7e90b726",
-      "name": "Stephen's Station",
-      "latitude": "12",
-      "longitude": "12",
-      "readings": [
-        {
-          "id": "2572a320-f382-11eb-bdf9-9765c41c5f57",
-          "code": "400",
-          "temperature": "59",
-          "windSpeed": "100",
-          "windDirection": "50",
-          "pressure": "1000",
-          "timestamp": "2021-08-02T11:09:46.448Z"
-        },
-        {
-          "id": "1cd7f400-f39a-11eb-b943-279c95ad7f96",
-          "code": "700",
-          "temperature": "0",
-          "windSpeed": "20",
-          "windDirection": "90",
-          "pressure": "801",
-          "timestamp": "2021-08-02T14:01:19.934Z"
-        }
-      ]
-    },
-    {
       "id": "73e3aac0-f2fd-11eb-9459-87fa6ee04fc7",
-      "name": "Adelle's Station",
+      "userid": "2b6f0989-7b7f-4a38-ad26-aa06b922d751",
+      "name": "Marge's Station",
       "latitude": "13",
       "longitude": "14",
       "readings": [
         {
-          "id": "b2306000-f39a-11eb-a944-09aa2e2eebf1",
-          "code": "200",
-          "temperature": "30",
+          "id": "33807440-f3a2-11eb-80ff-ffc741b0fa40",
+          "code": "500",
+          "temperature": "20",
           "windSpeed": "12",
-          "windDirection": "0",
-          "pressure": "850",
-          "timestamp": "2021-08-02T14:05:30.495Z"
+          "windDirection": "34",
+          "pressure": "1000",
+          "timestamp": "2021-08-02T14:59:13.920Z"
         }
       ]
+    },
+    {
+      "id": "e9c73bb0-f39f-11eb-a8b4-ff715fafd53f",
+      "userid": "66528b00-f39e-11eb-91ed-cd662ccc5301",
+      "name": "Stephen's Station",
+      "latitude": "13",
+      "longitude": "14",
+      "readings": []
+    },
+    {
+      "id": "bdcc6fd0-f3a4-11eb-b755-4d88868cb05d",
+      "userid": "3ad52697-6d98-4d80-8273-084de55a86c0",
+      "name": "Homer's Station",
+      "latitude": "23",
+      "longitude": "23",
+      "readings": []
     }
   ]
 }
