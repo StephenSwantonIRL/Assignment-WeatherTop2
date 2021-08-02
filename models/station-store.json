@@ -32,7 +32,17 @@
       "name": "Homer's Station",
       "latitude": "23",
       "longitude": "23",
-      "readings": []
+      "readings": [
+        {
+          "id": "b8a02e20-f3a9-11eb-bf54-63e0d65681b6",
+          "code": "400",
+          "temperature": "12",
+          "windSpeed": "32",
+          "windDirection": "123",
+          "pressure": "1000",
+          "timestamp": "2021-08-02T15:53:03.746Z"
+        }
+      ]
     }
   ]
 }
