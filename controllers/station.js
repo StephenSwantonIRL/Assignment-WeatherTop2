@@ -10,8 +10,9 @@ const station = {
     const stationId = request.params.id
     logger.info('Station id = ' + stationId)
     const station = stationStore.getStation(stationId)
-    let latestReading = station.readings[station.readings.length-1]
+
     let timeOrderedReadings = _.orderBy(_.cloneDeep(station.readings), 'timestamp', 'asc')
+    let latestReading = timeOrderedReadings[timeOrderedReadings.length-1]
     let trendPossible=0
     if(timeOrderedReadings.length>=3){
       trendPossible = 1

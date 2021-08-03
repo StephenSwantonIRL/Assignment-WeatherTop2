@@ -21,7 +21,6 @@ const dashboard = {
     }
     let stations = _.orderBy(_.cloneDeep(stationStore.getUserStations(loggedInUser.id)), 'name', 'asc')
     for(let i=0; i<stations.length; i++){
-      stations[i].latestReading = stations[i].readings[stations[i].readings.length-1]
       stations[i].maxAndMins = {}
       stations[i].maxAndMins.maxtemp = stationAnalytics.max(stationAnalytics.allTemps(stations[i].readings))
       stations[i].maxAndMins.mintemp = stationAnalytics.min(stationAnalytics.allTemps(stations[i].readings))
@@ -30,6 +29,7 @@ const dashboard = {
       stations[i].maxAndMins.maxwindspeed = stationAnalytics.max(stationAnalytics.allWindSpeeds(stations[i].readings))
       stations[i].maxAndMins.minwindspeed = stationAnalytics.min(stationAnalytics.allWindSpeeds(stations[i].readings))
       let readingclone = _.orderBy(_.cloneDeep(stations[i].readings), 'timestamp', 'asc')
+      stations[i].latestReading = readingclone[readingclone.length-1]
       stations[i].lastThree = {}
       stations[i].lastThree.r1 = readingclone[readingclone.length-1]
       stations[i].lastThree.r2 = readingclone[readingclone.length-2]
