@@ -41,7 +41,7 @@
 
       <p>{{beaufortlabel latestReading.windSpeed}}</p>
       <p>{{winddirectionlabel latestReading.windDirection}}</p>
-      <p>Feels like: {{windchill}} C</p>
+      <p>Feels like: {{windchill latestReading.temperature latestReading.windSpeed}} C</p>
       <p>Max: {{maxAndMins.maxwindspeed}} Km/h</p>
       <p>Min: {{maxAndMins.minwindspeed}} Km/h</p>
       {{#if trendpossible}}

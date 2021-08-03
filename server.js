@@ -24,7 +24,7 @@ app.engine(
         interpretweathercode: (code) => readingConversions.interpretWeatherCode(code),
         weathericon: (code) => readingConversions.generateWeatherCodeIcon(code),
         beaufort: (windSpeed) => readingConversions.convertToBeaufort(windSpeed),
-        beaufortlabel: (windSpeed) => "TBC",
+        beaufortlabel: (windSpeed) => readingConversions.convertToBeaufortLabel(windSpeed),
         winddirectionlabel: (windDirection) => readingConversions.directionLabel(windDirection),
         windchill: (temperature, windSpeed) => readingConversions.calculateWindChill(temperature,windSpeed),
         trend: (reading1,reading2,reading3) => stationAnalytics.determineTrend(reading1,reading2,reading3),
