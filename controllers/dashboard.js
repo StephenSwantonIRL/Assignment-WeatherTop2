@@ -6,6 +6,7 @@ const stationStore = require("../models/station-store.js")
 const accounts = require("./accounts.js")
 const readingConversions = require("../utils/readingconversions")
 const stationAnalytics = require("../utils/stationanalytics")
+const mapCalculations = require("../utils/mapcalculations")
 const uuid = require("uuid")
 
 const dashboard = {
@@ -38,10 +39,19 @@ const dashboard = {
         stations[i].trendpossible = 1
       }
     }
+    let coords = []
+    for(let i=0; i<stations.length;i++){
+      coords.push([stations[i].latitude, stations[i].longitude])
+      }
+    logger.info(coords);
     const viewData = {
       title: "WeatherTop V2 Dashboard",
       stations: stations,
-      stationsempty: anyStations(stations)
+      stationsempty: anyStations(stations),
+      layout: 'alternative',
+      mapZoom: mapCalculations.setInitialZoom(coords),
+      centrelat: mapCalculations.centreMap(coords)[0],
+      centrelon: mapCalculations.centreMap(coords)[1]
     }
     response.render("dashboard", viewData)
     logger.info(viewData);

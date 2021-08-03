@@ -4,6 +4,8 @@
   <section class="ui segment">
     {{# if stationsempty}}
     <h3> You don't have any stations yet. Create one below</h3>
+    {{else}}
+      {{> map }}
     {{/if}}
     {{#each stations}}
     <section class="ui segment">
