@@ -19,7 +19,6 @@ const dashboard = {
         return 0
       }
     }
-
     let stations = _.orderBy(_.cloneDeep(stationStore.getUserStations(loggedInUser.id)), 'name', 'asc')
     for(let i=0; i<stations.length; i++){
       stations[i].latestReading = stations[i].readings[stations[i].readings.length-1]
@@ -35,6 +34,9 @@ const dashboard = {
       stations[i].lastThree.r1 = readingclone[readingclone.length-1]
       stations[i].lastThree.r2 = readingclone[readingclone.length-2]
       stations[i].lastThree.r3 = readingclone[readingclone.length-3]
+      if(readingclone.length>=3){
+        stations[i].trendpossible = 1
+      }
     }
     const viewData = {
       title: "WeatherTop V2 Dashboard",
