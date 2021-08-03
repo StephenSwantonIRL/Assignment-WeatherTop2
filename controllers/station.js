@@ -1,6 +1,7 @@
 "use strict";
 
 const logger = require("../utils/logger")
+const _ = require('lodash')
 const stationStore = require("../models/station-store")
 const stationAnalytics = require("../utils/stationanalytics")
 const uuid = require("uuid")
@@ -10,6 +11,11 @@ const station = {
     logger.info('Station id = ' + stationId)
     const station = stationStore.getStation(stationId)
     let latestReading = station.readings[station.readings.length-1]
+    let timeOrderedReadings = _.orderBy(_.cloneDeep(station.readings), 'timestamp', 'asc')
+    let trendPossible=0
+    if(timeOrderedReadings.length>=3){
+      trendPossible = 1
+    }
     const viewData = {
       title: 'Station Details',
       station: stationStore.getStation(stationId),
@@ -21,6 +27,12 @@ const station = {
         mintemp: stationAnalytics.min(stationAnalytics.allTemps(station.readings)),
         minpressure: stationAnalytics.min(stationAnalytics.allPressures(station.readings)),
         minwindspeed: stationAnalytics.min(stationAnalytics.allWindSpeeds(station.readings))
+      },
+      trendpossible: trendPossible,
+      lastThree: {
+        r1: timeOrderedReadings[timeOrderedReadings.length-1],
+        r2: timeOrderedReadings[timeOrderedReadings.length-2],
+        r3: timeOrderedReadings[timeOrderedReadings.length-3]
       }
     }
     response.render('station', viewData);
@@ -35,8 +47,8 @@ const station = {
   },
   addReading(request, response){
     const stationId = request.params.id
-    const station = stationStore.getStation(stationId)
-    const timestamp = new Date()
+    //const station = stationStore.getStation(stationId)
+    const timestamp = new Date().toISOString()
 
     const newReading = {
       id : uuid.v1(),

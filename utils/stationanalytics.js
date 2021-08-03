@@ -1,4 +1,5 @@
 "use strict"
+const logger = require("../utils/logger")
 
 const stationAnalytics = {
 
@@ -48,7 +49,39 @@ const stationAnalytics = {
   values.forEach(compareToMin);
   return min;
 
-}
+},
+  determineTrend(reading1, reading2, reading3) {
+    let trend;
+    reading1 = Number(reading1)
+    reading2 = Number(reading2)
+    reading3 = Number(reading3)
+    logger.info(reading1)
+    logger.info(reading2)
+    logger.info(reading3)
+    if (reading1 > reading2 && reading2 > reading3) {
+      trend = "Rising";
+    } else if (reading3 > reading2 && reading2 > reading1) {
+      trend = "Falling";
+    } else {
+      trend = "Steady";
+    }
+    return trend;
+  },
+  getTrendIcon(reading1, reading2, reading3){
+      let trendicon;
+      reading1 = Number(reading1)
+      reading2 = Number(reading2)
+      reading3 = Number(reading3)
+      if (reading1 > reading2 && reading2 > reading3) {
+        trendicon = "up";
+      } else if (reading3 > reading2 && reading2 > reading1) {
+        trendicon = "down";
+      } else {
+        trendicon = "";
+      }
+      return trendicon;
+    }
+
 
 }
 

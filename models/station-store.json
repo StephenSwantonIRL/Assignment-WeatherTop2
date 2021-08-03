@@ -34,41 +34,42 @@
       "longitude": "23",
       "readings": [
         {
-          "id": "b8a02e20-f3a9-11eb-bf54-63e0d65681b6",
-          "code": "400",
+          "id": "91ca1450-f421-11eb-bfc1-0ba9e93227e2",
+          "code": "300",
           "temperature": "12",
-          "windSpeed": "32",
-          "windDirection": "123",
+          "windSpeed": "20",
+          "windDirection": "100",
           "pressure": "1000",
-          "timestamp": "2021-08-02T15:53:03.746Z"
-        }
-      ]
-    },
-    {
-      "id": "278bcd10-f3ac-11eb-8be5-3df65f07041c",
-      "userid": "3ad52697-6d98-4d80-8273-084de55a86c0",
-      "name": "Bart's Station",
-      "latitude": "32",
-      "longitude": "32",
-      "readings": [
+          "timestamp": "2021-08-03T06:10:58.197Z"
+        },
         {
-          "id": "4297c820-f3ac-11eb-8be5-3df65f07041c",
-          "code": "400",
-          "temperature": "32",
-          "windSpeed": "12",
-          "windDirection": "12",
-          "pressure": "1000",
-          "timestamp": "2021-08-02T16:11:14.210Z"
+          "id": "a381c120-f421-11eb-bfc1-0ba9e93227e2",
+          "code": "200",
+          "temperature": "13",
+          "windSpeed": "30",
+          "windDirection": "100",
+          "pressure": "900",
+          "timestamp": "2021-08-03T06:11:27.922Z"
+        },
+        {
+          "id": "ae8f5820-f421-11eb-bfc1-0ba9e93227e2",
+          "code": "100",
+          "temperature": "14",
+          "windSpeed": "20",
+          "windDirection": "100",
+          "pressure": "801",
+          "timestamp": "2021-08-03T06:11:46.466Z"
+        },
+        {
+          "id": "246e2e60-f425-11eb-88f3-2149e226e833",
+          "code": "500",
+          "temperature": "15",
+          "windSpeed": "10",
+          "windDirection": "100",
+          "pressure": "850",
+          "timestamp": "2021-08-03T06:36:32.707Z"
         }
       ]
-    },
-    {
-      "id": "303890b0-f3ac-11eb-8be5-3df65f07041c",
-      "userid": "3ad52697-6d98-4d80-8273-084de55a86c0",
-      "name": "Zena's Station",
-      "latitude": "42",
-      "longitude": "42",
-      "readings": []
     }
   ]
 }

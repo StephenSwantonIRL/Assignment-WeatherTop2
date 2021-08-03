@@ -27,8 +27,8 @@
       <p> {{converttofahrenheit latestReading.temperature}} F</p>
       <p>Max: {{maxAndMins.maxtemp}} C</p>
       <p>Min: {{maxAndMins.mintemp}} C</p>
-      {{# if trendPossible}}
-      <p>Trend: {{tempTrend}} <i class="arrow {{tempTrendIcon}} icon"></i></p>
+      {{# if trendpossible}}
+      <p>Trend: {{ trend lastThree.r1.temperature lastThree.r2.temperature lastThree.r3.temperature }} <i class="arrow {{ trendicon lastThree.r1.temperature lastThree.r2.temperature lastThree.r3.temperature }} icon"></i></p>
       {{/if}}
     </div>
   </div>
@@ -38,13 +38,14 @@
     </div>
     <div class="content">
       <p>{{beaufort latestReading.windSpeed}} bft</p>
+
       <p>{{beaufortlabel latestReading.windSpeed}}</p>
       <p>{{winddirectionlabel latestReading.windDirection}}</p>
       <p>Feels like: {{windchill}} C</p>
       <p>Max: {{maxAndMins.maxwindspeed}} Km/h</p>
       <p>Min: {{maxAndMins.minwindspeed}} Km/h</p>
-      {{# if trendPossible}}
-        <p>Trend: {{windTrend}} <i class="arrow {{windTrendIcon}} icon"></i></p>
+      {{#if trendpossible}}
+        <p>Trend: {{ trend lastThree.r1.windSpeed lastThree.r2.windSpeed lastThree.r3.windSpeed }} <i class="arrow {{ trendicon lastThree.r1.windSpeed lastThree.r2.windSpeed lastThree.r3.windSpeed }} icon"></i></p>
       {{/if}}
     </div>
   </div>
@@ -56,8 +57,8 @@
       <p>{{latestReading.pressure}} hPa</p>
       <p>Max: {{maxAndMins.maxpressure}} hPa</p>
       <p>Min: {{maxAndMins.minpressure}} hPa</p>
-      {{# if trendPossible}}
-        <p>Trend: {{pressureTrend}} <i class="arrow {{pressureTrendIcon}} icon"></i></p>
+      {{# if trendpossible}}
+        <p>Trend: {{ trend lastThree.r1.pressure lastThree.r2.pressure lastThree.r3.pressure }} <i class="arrow {{ trendicon lastThree.r1.pressure lastThree.r2.pressure lastThree.r3.pressure }} icon"></i></p>
       {{/if}}
     </div>
   </div>

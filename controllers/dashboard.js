@@ -30,6 +30,11 @@ const dashboard = {
       stations[i].maxAndMins.minpressure = stationAnalytics.min(stationAnalytics.allPressures(stations[i].readings))
       stations[i].maxAndMins.maxwindspeed = stationAnalytics.max(stationAnalytics.allWindSpeeds(stations[i].readings))
       stations[i].maxAndMins.minwindspeed = stationAnalytics.min(stationAnalytics.allWindSpeeds(stations[i].readings))
+      let readingclone = _.orderBy(_.cloneDeep(stations[i].readings), 'timestamp', 'asc')
+      stations[i].lastThree = {}
+      stations[i].lastThree.r1 = readingclone[readingclone.length-1]
+      stations[i].lastThree.r2 = readingclone[readingclone.length-2]
+      stations[i].lastThree.r3 = readingclone[readingclone.length-3]
     }
     const viewData = {
       title: "WeatherTop V2 Dashboard",
