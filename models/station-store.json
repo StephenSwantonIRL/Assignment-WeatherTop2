@@ -61,31 +61,24 @@
           "timestamp": "2021-08-03T06:11:46.466Z"
         },
         {
-          "id": "246e2e60-f425-11eb-88f3-2149e226e833",
-          "code": "500",
-          "temperature": "15",
-          "windSpeed": "10",
-          "windDirection": "100",
-          "pressure": "850",
-          "timestamp": "2021-08-03T06:36:32.707Z"
+          "id": "86ae4c70-f4e5-11eb-b7d5-f9fefdce9cc9",
+          "code": "800",
+          "temperature": 29.33,
+          "windSpeed": 2.74,
+          "pressure": 1011,
+          "windDirection": 27,
+          "timestamp": "2021-08-04T05:33:40.242Z"
+        },
+        {
+          "id": "fed4a910-f4e5-11eb-8029-b1f4f87c610b",
+          "code": "800",
+          "temperature": 29.33,
+          "windSpeed": 2.74,
+          "pressure": 1011,
+          "windDirection": 27,
+          "timestamp": "2021-08-04T05:37:02.201Z"
         }
       ]
-    },
-    {
-      "id": "d89292c0-f469-11eb-9f4d-c1b7e99eb4e3",
-      "userid": "3ad52697-6d98-4d80-8273-084de55a86c0",
-      "name": "Station2",
-      "latitude": "24",
-      "longitude": "24",
-      "readings": []
-    },
-    {
-      "id": "d73db350-f478-11eb-ac32-0bd47450cba6",
-      "userid": "3ad52697-6d98-4d80-8273-084de55a86c0",
-      "name": "Station3",
-      "latitude": "23.5",
-      "longitude": "23.5",
-      "readings": []
     }
   ]
 }

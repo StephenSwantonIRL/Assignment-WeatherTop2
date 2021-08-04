@@ -1,6 +1,8 @@
 "use strict";
 
 const logger = require("../utils/logger")
+const projectAPIs = require("../apis")
+const axios = require("axios")
 const _ = require('lodash')
 const stationStore = require("../models/station-store")
 const stationAnalytics = require("../utils/stationanalytics")
@@ -63,6 +65,28 @@ const station = {
     logger.debug("New Reading = ", newReading)
     stationStore.addReading(stationId, newReading)
     response.redirect("/station/"+stationId)
+  },
+  async addAutoReading(request, response) {
+    logger.info("new Auto report");
+    const stationId = request.params.id
+    const station = stationStore.getStation(stationId)
+    const timestamp = new Date().toISOString()
+    let report = {};
+    const requestUrl = `https://api.openweathermap.org/data/2.5/onecall?lat=${station.latitude}&lon=${station.longitude}&units=metric&appid=${projectAPIs.openweather}`
+    const result = await axios.get(requestUrl);
+    if (result.status == 200) {
+      const reading = result.data.current;
+      report.id = uuid.v1()
+      report.code = reading.weather[0].id.toString();
+      report.temperature = reading.temp;
+      report.windSpeed = reading.wind_speed;
+      report.pressure = reading.pressure;
+      report.windDirection = reading.wind_deg;
+      report.timestamp = timestamp;
+    }
+    stationStore.addReading(stationId, report)
+
+    response.redirect("/station/"+stationId);
   }
 
 };
