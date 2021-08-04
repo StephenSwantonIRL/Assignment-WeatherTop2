@@ -7,6 +7,7 @@ const cookieParser = require("cookie-parser");
 const fileUpload = require("express-fileupload");
 const readingConversions = require("./utils/readingconversions.js")
 const stationAnalytics = require("./utils/stationanalytics")
+const generalUtils = require("./utils/generalutils")
 
 const app = express();
 app.use(cookieParser());
@@ -28,8 +29,9 @@ app.engine(
         winddirectionlabel: (windDirection) => readingConversions.directionLabel(windDirection),
         windchill: (temperature, windSpeed) => readingConversions.calculateWindChill(temperature,windSpeed),
         trend: (reading1,reading2,reading3) => stationAnalytics.determineTrend(reading1,reading2,reading3),
-        trendicon: (reading1, reading2, reading3) => stationAnalytics.getTrendIcon(reading1,reading2,reading3)
-        }
+        trendicon: (reading1, reading2, reading3) => stationAnalytics.getTrendIcon(reading1,reading2,reading3),
+        commaseparatedlist: (array, property, dataType) => generalUtils.getNestedPropertyValuesFromArray(array,property, dataType)
+      }
       }
 
   )

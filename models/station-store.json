@@ -77,6 +77,33 @@
           "pressure": 1011,
           "windDirection": 27,
           "timestamp": "2021-08-04T05:37:02.201Z"
+        },
+        {
+          "id": "cc25b7d0-f543-11eb-98ad-8fb3e0d45da1",
+          "code": "801",
+          "temperature": 34.42,
+          "windSpeed": 3.25,
+          "pressure": 1008,
+          "windDirection": 350,
+          "timestamp": "2021-08-04T16:48:29.415Z"
+        },
+        {
+          "id": "815434a0-f545-11eb-9392-0d3af09a1697",
+          "code": "801",
+          "temperature": 34.42,
+          "windSpeed": 3.25,
+          "pressure": 1008,
+          "windDirection": 350,
+          "timestamp": "2021-08-04T17:00:40.218Z"
+        },
+        {
+          "id": "59855c00-f546-11eb-8d07-79f3ff6df1ae",
+          "code": "801",
+          "temperature": 34.42,
+          "windSpeed": 3.25,
+          "pressure": 1008,
+          "windDirection": 350,
+          "timestamp": "2021-08-04T17:06:45.950Z"
         }
       ]
     }

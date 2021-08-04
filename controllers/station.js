@@ -20,6 +20,7 @@ const station = {
       trendPossible = 1
     }
     const viewData = {
+      layout: 'stationlayout',
       title: 'Station Details',
       station: stationStore.getStation(stationId),
       latestReading: latestReading,

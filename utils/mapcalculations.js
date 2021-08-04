@@ -43,7 +43,7 @@ const mapCalculations = {
       let compare = clonedCoords.shift()
       for (let j = 0; j < clonedCoords.length; j++) {
         if (getDistance(compare, clonedCoords[j]) > maxDistance) {
-          maxDistance = getDistance(compare, clonedCoords[j])
+          maxDistance = getDistance(compare, clonedCoords[j])/1000
         }
       }
     }

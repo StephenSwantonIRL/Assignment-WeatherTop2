@@ -1,0 +1,49 @@
+<div class="ui segment">
+  <div class="ui segment" id="chart"></div>
+  <div class="ui buttons">
+    <button id="tempToggle" onclick="renderChart('temp')" class="ui button">Temperature</button>
+    <button id="pressureToggle" onclick="renderChart('pressure')" class="ui button">Pressure</button>
+    <button id="windSpeedToggle" onclick="renderChart('windSpeed')" class="ui button">Wind Speed</button>
+  </div>
+</div>
+<script>
+  dataTemp = {
+    labels: [{{{commaseparatedlist station.readings "timestamp" "String"}}}],
+    datasets: [
+      { values: [{{commaseparatedlist station.readings "temperature"}}] }
+    ]
+  };
+  dataPressure = {
+    labels: [{{{commaseparatedlist station.readings "timestamp" "String"}}}],
+    datasets: [
+      { values: [{{commaseparatedlist station.readings "pressure"}}] }
+    ]
+  };
+  dataWindSpeed = {
+    labels: [{{{commaseparatedlist station.readings "timestamp" "String"}}}],
+    datasets: [
+      { values: [{{commaseparatedlist station.readings "windSpeed"}}] }
+    ]
+  };
+  let data
+  function renderChart(property){
+
+    if(property ==="temp"){
+      data = dataTemp
+    } else if (property === "pressure"){
+      data = dataPressure
+    } else if (property === "windSpeed"){
+      data = dataWindSpeed
+    }
+
+  new frappe.Chart("#chart", {
+    data: data,
+    type: "line",
+    height: 180,
+    colors: ["red"]
+  })
+  }
+  document.onload = document.getElementById("tempToggle").click()
+  document.getElementById("tempToggle").focus()
+
+</script>

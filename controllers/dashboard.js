@@ -48,7 +48,7 @@ const dashboard = {
       title: "WeatherTop V2 Dashboard",
       stations: stations,
       stationsempty: anyStations(stations),
-      layout: 'alternative',
+      layout: 'dashboardlayout',
       mapZoom: mapCalculations.setInitialZoom(coords),
       centrelat: mapCalculations.centreMap(coords)[0],
       centrelon: mapCalculations.centreMap(coords)[1]
