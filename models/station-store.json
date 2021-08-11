@@ -104,8 +104,34 @@
           "pressure": 1008,
           "windDirection": 350,
           "timestamp": "2021-08-04T17:06:45.950Z"
+        },
+        {
+          "id": "142a04b0-f557-11eb-b1f0-2725fb767c82",
+          "code": "800",
+          "temperature": 32.12,
+          "windSpeed": 3.69,
+          "pressure": 1009,
+          "windDirection": 8,
+          "timestamp": "2021-08-04T19:06:30.859Z"
+        },
+        {
+          "id": "cb4d51a0-fa03-11eb-8477-db97d37ade80",
+          "code": "800",
+          "temperature": 33.35,
+          "windSpeed": 5.44,
+          "pressure": 1009,
+          "windDirection": 28,
+          "timestamp": "2021-08-10T17:52:56.008Z"
         }
       ]
+    },
+    {
+      "id": "07696680-f557-11eb-b1f0-2725fb767c82",
+      "userid": "3ad52697-6d98-4d80-8273-084de55a86c0",
+      "name": "Station 3",
+      "latitude": "24",
+      "longitude": "24",
+      "readings": []
     }
   ]
 }

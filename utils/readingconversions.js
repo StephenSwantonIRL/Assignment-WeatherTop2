@@ -1,24 +1,83 @@
 "use strict"
 
 const weatherCodes = new Map()
-weatherCodes.set("100", "Clear")
-weatherCodes.set("200", "Partial Clouds")
-weatherCodes.set("300", "Cloudy")
-weatherCodes.set("400", "Light Showers")
-weatherCodes.set("500", "Heavy Showers")
-weatherCodes.set("600", "Rain")
-weatherCodes.set("700", "Snow")
-weatherCodes.set("800", "Thunder")
+weatherCodes.set("200", "Thunderstorm with Light Rain")
+weatherCodes.set("201", "Thunderstorm with Rain")
+weatherCodes.set("202", "Thunderstorm with Heavy Rain")
+weatherCodes.set("210", "Light Thunderstorm")
+weatherCodes.set("211", "Thunderstorm")
+weatherCodes.set("212", "Heavy Thunderstorm")
+weatherCodes.set("221", "Ragged Thunderstorm")
+weatherCodes.set("230", "Thunderstorm with Light Drizzle")
+weatherCodes.set("231", "Thunderstorm with Drizzle")
+weatherCodes.set("232", "Thunderstorm with Heavy Drizzle")
+weatherCodes.set("300", "Light Intensity Drizzle")
+weatherCodes.set("301", "Drizzle")
+weatherCodes.set("302", "Heavy Intensity Drizzle")
+weatherCodes.set("310", "Light Intensity Drizzle Rain")
+weatherCodes.set("311", "Drizzle Rain")
+weatherCodes.set("312", "Heavy Intensity Drizzle Rain")
+weatherCodes.set("313", "Shower Rain And Drizzle")
+weatherCodes.set("314", "Heavy Shower Rain And Drizzle")
+weatherCodes.set("321", "Shower Drizzle")
+weatherCodes.set("500", "Light Rain")
+weatherCodes.set("501", "Moderate Rain")
+weatherCodes.set("502", "Heavy Intensity Rain")
+weatherCodes.set("503", "Very Heavy Rain")
+weatherCodes.set("504", "Extreme Rain")
+weatherCodes.set("511", "Freezing Rain")
+weatherCodes.set("520", "Light Intensity Shower Rain")
+weatherCodes.set("521", "Shower Rain")
+weatherCodes.set("522", "Heavy Intensity Shower Rain")
+weatherCodes.set("531", "Ragged Shower Rain")
+weatherCodes.set("600", "Light Snow")
+weatherCodes.set("601", "Snow")
+weatherCodes.set("602", "Heavy Snow")
+weatherCodes.set("611", "Sleet")
+weatherCodes.set("612", "Light Shower Sleet")
+weatherCodes.set("613", "Shower Sleet")
+weatherCodes.set("615", "Light Rain And Snow")
+weatherCodes.set("616", "Rain And Snow")
+weatherCodes.set("620", "Light Shower Snow")
+weatherCodes.set("621", "Shower Snow")
+weatherCodes.set("622", "Heavy Shower Snow")
+weatherCodes.set("701", "Mist")
+weatherCodes.set("711", "Smoke")
+weatherCodes.set("721", "Haze")
+weatherCodes.set("731", "Sand/ Dust Whirls")
+weatherCodes.set("741", "Fog")
+weatherCodes.set("751", "Sand")
+weatherCodes.set("761", "Dust")
+weatherCodes.set("762", "Volcanic Ash")
+weatherCodes.set("771", "Squalls")
+weatherCodes.set("781", "Tornado")
+weatherCodes.set("800", "Clear Sky")
+weatherCodes.set("801", "Few Clouds: 11-25%")
+weatherCodes.set("802", "Scattered Clouds: 25-50%")
+weatherCodes.set("803", "Broken Clouds: 51-84%")
+weatherCodes.set("804", "Overcast Clouds: 85-100%")
+
 
 const weatherCodeIcons = new Map()
-weatherCodeIcons.set("100", "sun");
-weatherCodeIcons.set("200", "cloud sun");
-weatherCodeIcons.set("300", "cloud");
-weatherCodeIcons.set("400", "cloud sun rain");
-weatherCodeIcons.set("500", "cloud showers heavy");
-weatherCodeIcons.set("600", "cloud rain");
-weatherCodeIcons.set("700", "snowflake");
-weatherCodeIcons.set("800", "bolt");
+weatherCodeIcons.set("800", "01d")
+weatherCodeIcons.set("801", "02d")
+weatherCodeIcons.set("802", "03d")
+weatherCodeIcons.set("803", "04d")
+weatherCodeIcons.set("804", "04d")
+weatherCodeIcons.set("3XX", "09d")
+weatherCodeIcons.set("520", "09d")
+weatherCodeIcons.set("521", "09d")
+weatherCodeIcons.set("522", "09d")
+weatherCodeIcons.set("531", "09d")
+weatherCodeIcons.set("500", "10d")
+weatherCodeIcons.set("501", "10d")
+weatherCodeIcons.set("502", "10d")
+weatherCodeIcons.set("503", "10d")
+weatherCodeIcons.set("504", "10d")
+weatherCodeIcons.set("2XX", "11d")
+weatherCodeIcons.set("511", "13d")
+weatherCodeIcons.set("6XX", "13d")
+weatherCodeIcons.set("7XX", "50d")
 
 const readingConversions = {
 
@@ -27,7 +86,21 @@ const readingConversions = {
 
 },
   generateWeatherCodeIcon(code) {
-    return weatherCodeIcons.get(code)
+    if(code.charAt(0) == "6"){
+      return weatherCodeIcons.get("6XX")
+    }
+     else if(code.charAt(0) == "7"){
+      return weatherCodeIcons.get("7XX")
+    } else if(code.charAt(0) == "2"){
+      return weatherCodeIcons.get("2XX")
+    } else if(code.charAt(0) == "3"){
+      return weatherCodeIcons.get("3XX")
+    } else {
+      return weatherCodeIcons.get(code)
+
+    }
+
+
 },
 
 convertToFahrenheit(temperature){
