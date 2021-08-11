@@ -27,110 +27,35 @@
       "readings": []
     },
     {
-      "id": "bdcc6fd0-f3a4-11eb-b755-4d88868cb05d",
-      "userid": "3ad52697-6d98-4d80-8273-084de55a86c0",
-      "name": "Homer's Station",
-      "latitude": "23",
-      "longitude": "23",
-      "readings": [
-        {
-          "id": "91ca1450-f421-11eb-bfc1-0ba9e93227e2",
-          "code": "300",
-          "temperature": "12",
-          "windSpeed": "20",
-          "windDirection": "100",
-          "pressure": "1000",
-          "timestamp": "2021-08-03T06:10:58.197Z"
-        },
-        {
-          "id": "a381c120-f421-11eb-bfc1-0ba9e93227e2",
-          "code": "200",
-          "temperature": "13",
-          "windSpeed": "30",
-          "windDirection": "100",
-          "pressure": "900",
-          "timestamp": "2021-08-03T06:11:27.922Z"
-        },
-        {
-          "id": "ae8f5820-f421-11eb-bfc1-0ba9e93227e2",
-          "code": "100",
-          "temperature": "14",
-          "windSpeed": "20",
-          "windDirection": "100",
-          "pressure": "801",
-          "timestamp": "2021-08-03T06:11:46.466Z"
-        },
-        {
-          "id": "86ae4c70-f4e5-11eb-b7d5-f9fefdce9cc9",
-          "code": "800",
-          "temperature": 29.33,
-          "windSpeed": 2.74,
-          "pressure": 1011,
-          "windDirection": 27,
-          "timestamp": "2021-08-04T05:33:40.242Z"
-        },
-        {
-          "id": "fed4a910-f4e5-11eb-8029-b1f4f87c610b",
-          "code": "800",
-          "temperature": 29.33,
-          "windSpeed": 2.74,
-          "pressure": 1011,
-          "windDirection": 27,
-          "timestamp": "2021-08-04T05:37:02.201Z"
-        },
-        {
-          "id": "cc25b7d0-f543-11eb-98ad-8fb3e0d45da1",
-          "code": "801",
-          "temperature": 34.42,
-          "windSpeed": 3.25,
-          "pressure": 1008,
-          "windDirection": 350,
-          "timestamp": "2021-08-04T16:48:29.415Z"
-        },
-        {
-          "id": "815434a0-f545-11eb-9392-0d3af09a1697",
-          "code": "801",
-          "temperature": 34.42,
-          "windSpeed": 3.25,
-          "pressure": 1008,
-          "windDirection": 350,
-          "timestamp": "2021-08-04T17:00:40.218Z"
-        },
-        {
-          "id": "59855c00-f546-11eb-8d07-79f3ff6df1ae",
-          "code": "801",
-          "temperature": 34.42,
-          "windSpeed": 3.25,
-          "pressure": 1008,
-          "windDirection": 350,
-          "timestamp": "2021-08-04T17:06:45.950Z"
-        },
-        {
-          "id": "142a04b0-f557-11eb-b1f0-2725fb767c82",
-          "code": "800",
-          "temperature": 32.12,
-          "windSpeed": 3.69,
-          "pressure": 1009,
-          "windDirection": 8,
-          "timestamp": "2021-08-04T19:06:30.859Z"
-        },
-        {
-          "id": "cb4d51a0-fa03-11eb-8477-db97d37ade80",
-          "code": "800",
-          "temperature": 33.35,
-          "windSpeed": 5.44,
-          "pressure": 1009,
-          "windDirection": 28,
-          "timestamp": "2021-08-10T17:52:56.008Z"
-        }
-      ]
-    },
-    {
       "id": "07696680-f557-11eb-b1f0-2725fb767c82",
       "userid": "3ad52697-6d98-4d80-8273-084de55a86c0",
       "name": "Station 3",
       "latitude": "24",
       "longitude": "24",
+      "readings": []
+    },
+    {
+      "id": "645b6b00-faa6-11eb-afd1-f57a9fcfb014",
+      "userid": "3ad52697-6d98-4d80-8273-084de55a86c0",
+      "name": "Homer's Station",
+      "latitude": "23",
+      "longitude": "23",
+      "readings": []
+    },
+    {
+      "id": "dc274b90-faa6-11eb-9e2b-c1e2faadb035",
+      "userid": "3ad52697-6d98-4d80-8273-084de55a86c0",
+      "name": "Stephen's Station",
+      "latitude": "25",
+      "longitude": "25",
+      "readings": []
+    },
+    {
+      "id": "e44b3020-faa6-11eb-9e2b-c1e2faadb035",
+      "userid": "3ad52697-6d98-4d80-8273-084de55a86c0",
+      "name": "Ireland",
+      "latitude": "53.41291",
+      "longitude": "-8.24389",
       "readings": []
     }
   ]

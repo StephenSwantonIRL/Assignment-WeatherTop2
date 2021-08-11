@@ -42,7 +42,7 @@ const mapCalculations = {
     for (let i = 0; i < clonedCoords.length; i++) {
       let compare = clonedCoords.shift()
       for (let j = 0; j < clonedCoords.length; j++) {
-        if (getDistance(compare, clonedCoords[j]) > maxDistance) {
+        if (getDistance(compare, clonedCoords[j])/1000 > maxDistance) {
           maxDistance = getDistance(compare, clonedCoords[j])/1000
         }
       }
@@ -70,7 +70,7 @@ const mapCalculations = {
     } else if (maxDistance < 352) {
       return 5
     } else {
-      return 4
+      return 2
     }
   },
   centreMap(coords) {
