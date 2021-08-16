@@ -23,6 +23,7 @@ router.get("/station/:id", station.index);
 
 router.post("/dashboard/addstation", dashboard.addStation)
 router.get("/dashboard/deletestation/:id", dashboard.deleteStation)
+router.get("/coords/:address" , dashboard.maprequest);
 
 router.post("/station/:id/addreading", station.addReading)
 router.post("/autoread/:id", station.addAutoReading)

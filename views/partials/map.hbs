@@ -11,5 +11,6 @@ L.tileLayer('https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_toke
 
   {{#each stations}}
 var marker = L.marker([{{ latitude }}, {{longitude}}]).addTo(mymap);
+marker.bindTooltip("{{name}}").openTooltip();
 {{/each}}
 </script>

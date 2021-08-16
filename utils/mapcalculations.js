@@ -69,12 +69,14 @@ const mapCalculations = {
       return 6
     } else if (maxDistance < 352) {
       return 5
+    } else if (maxDistance < 700) {
+      return 4
     } else {
       return 2
     }
   },
   centreMap(coords) {
-    let maxDistance = 0;
+    let maxDistance = 0
     let centreCoords = coords[0]
     let clonedCoords = _.cloneDeep(coords)
     for (let i = 0; i < clonedCoords.length; i++) {

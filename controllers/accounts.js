@@ -46,7 +46,10 @@ const accounts = {
       logger.info(`logging in ${user.email}`);
       response.redirect("/dashboard");
     } else {
-      response.redirect("/login");
+      const viewData = {
+        notify: "Incorrect Username or Password. Please try again."
+      }
+      response.render("login", viewData);
     }
   },
 

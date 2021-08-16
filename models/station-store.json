@@ -27,36 +27,85 @@
       "readings": []
     },
     {
-      "id": "07696680-f557-11eb-b1f0-2725fb767c82",
-      "userid": "3ad52697-6d98-4d80-8273-084de55a86c0",
-      "name": "Station 3",
-      "latitude": "24",
-      "longitude": "24",
-      "readings": []
-    },
-    {
       "id": "645b6b00-faa6-11eb-afd1-f57a9fcfb014",
       "userid": "3ad52697-6d98-4d80-8273-084de55a86c0",
       "name": "Homer's Station",
       "latitude": "23",
       "longitude": "23",
-      "readings": []
+      "readings": [
+        {
+          "id": "2cc19a60-faa7-11eb-9e2b-c1e2faadb035",
+          "code": "800",
+          "temperature": 38.14,
+          "windSpeed": 5.27,
+          "pressure": 1009,
+          "windDirection": 7,
+          "timestamp": "2021-08-11T13:22:27.961Z"
+        },
+        {
+          "id": "30e0e6a0-faa7-11eb-9e2b-c1e2faadb035",
+          "code": "800",
+          "temperature": 38.14,
+          "windSpeed": 5.27,
+          "pressure": 1009,
+          "windDirection": 7,
+          "timestamp": "2021-08-11T13:22:35.011Z"
+        },
+        {
+          "id": "339d2070-faa7-11eb-9e2b-c1e2faadb035",
+          "code": "800",
+          "temperature": 38.14,
+          "windSpeed": 5.27,
+          "pressure": 1009,
+          "windDirection": 7,
+          "timestamp": "2021-08-11T13:22:39.588Z"
+        },
+        {
+          "id": "288122f0-fb96-11eb-9ca9-039272e48ac5",
+          "code": "800",
+          "temperature": 32.03,
+          "windSpeed": 5.19,
+          "pressure": 1011,
+          "windDirection": 31,
+          "timestamp": "2021-08-12T17:53:10.586Z"
+        }
+      ]
     },
     {
-      "id": "dc274b90-faa6-11eb-9e2b-c1e2faadb035",
+      "id": "c086bf60-faab-11eb-9e2b-c1e2faadb035",
       "userid": "3ad52697-6d98-4d80-8273-084de55a86c0",
-      "name": "Stephen's Station",
-      "latitude": "25",
-      "longitude": "25",
-      "readings": []
-    },
-    {
-      "id": "e44b3020-faa6-11eb-9e2b-c1e2faadb035",
-      "userid": "3ad52697-6d98-4d80-8273-084de55a86c0",
-      "name": "Ireland",
+      "name": "Dublin",
       "latitude": "53.41291",
       "longitude": "-8.24389",
-      "readings": []
+      "readings": [
+        {
+          "id": "e6942a50-fb99-11eb-baeb-27cf01a3a156",
+          "code": "801",
+          "temperature": 14.56,
+          "windSpeed": 7.45,
+          "pressure": 1011,
+          "windDirection": 232,
+          "timestamp": "2021-08-12T18:19:58.017Z"
+        },
+        {
+          "id": "5447d880-fe9c-11eb-9374-973c9e2effe9",
+          "code": "804",
+          "temperature": 14.84,
+          "windSpeed": 5.09,
+          "pressure": 1023,
+          "windDirection": 300,
+          "timestamp": "2021-08-16T14:14:54.207Z"
+        },
+        {
+          "id": "2e73d6c0-fea3-11eb-98c4-e7f266332174",
+          "code": "804",
+          "temperature": 14.84,
+          "windSpeed": 5.43,
+          "pressure": 1023,
+          "windDirection": 296,
+          "timestamp": "2021-08-16T15:03:57.412Z"
+        }
+      ]
     }
   ]
 }

@@ -1,0 +1,161 @@
+BODY
+{
+	background: url(/images/castanzo.png) -182px -184px / 1800px no-repeat fixed;
+}
+.wt-blue
+{
+	color: #00A4CC;
+}
+.wt-emphasis
+{
+	font-style: italic;
+	font-weight: bolder;
+}
+A.wt-orange
+{
+	background-color: #E0A02B;
+}
+SPAN.tagline
+{
+	font-size: smaller;
+	display: block;
+}
+SPAN.site-title
+{
+	font-size: larger;
+	text-transform: uppercase;
+}
+SECTION.ui.container
+{
+	margin-top: 15px;
+}
+.ui.segment, NAV.ui.menu, DIV.field INPUT, .ui.basic.segment
+{
+	background-color: rgba(215, 219, 223, 0.5);
+}
+DIV.card DIV.content
+{
+	background-color: rgba(215, 219, 223, 0.9) !important;
+}
+DIV.flow DIV.flow-container DIV.image
+{
+	float: left;
+	padding-right: 20px;
+	min-height: 200px;
+}
+DIV.flow-container
+{
+	margin-left: auto;
+	width: 100%;
+}
+P#indent
+{
+	margin-left: 10px;
+	margin-top: 15px;
+	margin-bottom: 0px;
+}
+IMG.left-inline-image
+{
+	height: 150px;
+}
+DIV.half
+{
+	width: 65%;
+	float: left;
+}
+DIV.third
+{
+	width: 33%;
+	float: left;
+}
+DIV.flow-container DIV.image
+{
+	width: 35%;
+}
+DIV.flow-container DIV.image IMG
+{
+	margin-left: auto;
+	position: relative;
+	top: 15px;
+	border: 1px solid rgba(215, 219, 223, 0.9);
+	box-shadow: 1px 1px 5px #B7B7B7;
+}
+.floating-image
+{
+	border: 1px solid rgba(215, 219, 223, 0.9);
+	box-shadow: 1px 1px 5px #B7B7B7;
+	border-radius: 4px;
+}
+DIV.ui.two.column.middle.aligned.grid.basic.segment DIV.column.no-padding
+{
+	padding: 0px 14px 0px 0px;
+}
+DIV.flow-container DIV.header
+{
+	padding-top: 5px;
+	padding-bottom: 10px;
+}
+.flow-container DIV.ui.card .description
+{
+	text-align: left;
+}
+.flow-container DIV.ui.card
+{
+	width: 55%;
+	min-height: 186px;
+}
+TABLE.ui.fixed.table
+{
+	background-color: rgba(215, 219, 223, 1) !important;
+}
+TABLE.ui.fixed.table TH
+{
+	background-color: rgba(202, 208, 213, 0.900) !important;
+}
+DIV#stationactions
+{
+	margin-top: 15px;
+}
+H2.ui.header, H3.ui.header
+{
+	color: #025A6F;
+}
+DIV.card .icon
+{
+	color: #00A4CC;
+}
+A.ui.tiny.button
+{
+	background-color: #E0A02B;
+	color: white;
+	box-shadow: 0 0 0 0 rgba(34, 36, 38, 0.15) inset;
+}
+BUTTON.ui.labeled.icon.button
+{
+}
+DIV.card .icon.big
+{
+	float: right;
+}
+FORM DIV.fields DIV.field INPUT::placeholder, FORM.ui.stacked.segment.form INPUT::placeholder
+{
+	color: grey;
+	font-style: italic;
+}
+BUTTON.ui.submit.button
+{
+	background-color: #00A4CC;
+	color: white;
+	box-shadow: 0 0 0 0 rgba(34, 36, 38, 0.15) inset;
+}
+@media (max-width: 770px)
+{
+	DIV.card .icon
+	{
+		float: right;
+	}
+	H2.ui.header
+	{
+		padding-bottom: 10px;
+	}
+}

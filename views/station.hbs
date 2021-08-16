@@ -7,11 +7,15 @@
 
 
   </h2>
-  {{>chart}}
+
   {{#if station.readings}}
+    {{>chart}}
     {{> latestreading latestreading=latestreading latitude=station.latitude longitude=station.longitude }}
+    {{> listreadings readings=station.readings sid=station.id }}
+    {{else}}
+    <p>You don't have any readings for this station yet. Create one below.</p>
     {{/if}}
-  {{> listreadings readings=station.readings sid=station.id }}
+
   {{> addreading sid=station.id }}
 
 </section>

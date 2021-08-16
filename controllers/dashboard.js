@@ -5,6 +5,8 @@ const _ = require("lodash")
 const stationStore = require("../models/station-store.js")
 const accounts = require("./accounts.js")
 const readingConversions = require("../utils/readingconversions")
+const projectAPIs = require("../apis")
+const axios = require("axios")
 const stationAnalytics = require("../utils/stationanalytics")
 const mapCalculations = require("../utils/mapcalculations")
 const uuid = require("uuid")
@@ -74,6 +76,18 @@ const dashboard = {
     }
     stationStore.addStation(newStation)
     response.redirect("/dashboard")
+  },
+  async maprequest(request, response) {
+    console.log(request.params)
+    logger.info("rendering new report");
+    const mapRequest = `https://maps.googleapis.com/maps/api/geocode/json?address=${request.params.address}&key=${projectAPIs.googleGeo}`
+    console.log(mapRequest)
+    const result = await axios.get(mapRequest);
+    if (result.status == 200) {
+      let x = result.data.results[0].geometry.location
+      console.log(x)
+      response.send({x});
+    }
   }
 };
 
