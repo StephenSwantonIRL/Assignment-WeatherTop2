@@ -149,6 +149,33 @@
           "windDirection": "14",
           "pressure": "1000",
           "timestamp": "2021-08-17T11:55:20.352Z"
+        },
+        {
+          "id": "f8092ab0-ff7c-11eb-9260-37f0c71d3825",
+          "code": "804",
+          "temperature": 14.56,
+          "windSpeed": 5.22,
+          "pressure": 1023,
+          "windDirection": 295,
+          "timestamp": "2021-08-17T17:02:56.378Z"
+        },
+        {
+          "id": "c35fe2f0-ff80-11eb-ae64-1d7173036ed8",
+          "code": "804",
+          "temperature": 14.56,
+          "windSpeed": 4.97,
+          "pressure": 1023,
+          "windDirection": 297,
+          "timestamp": "2021-08-17T17:30:05.984Z"
+        },
+        {
+          "id": "d2a5cc70-ff80-11eb-ae64-1d7173036ed8",
+          "code": "804",
+          "temperature": 14.56,
+          "windSpeed": 4.97,
+          "pressure": 1023,
+          "windDirection": 297,
+          "timestamp": "2021-08-17T17:30:31.734Z"
         }
       ]
     },
@@ -169,22 +196,6 @@
           "timestamp": "2021-08-17T13:52:52.386Z"
         }
       ]
-    },
-    {
-      "id": "d49853d0-ff63-11eb-9be9-cfaad2e0c9bb",
-      "userid": "3ad52697-6d98-4d80-8273-084de55a86c0",
-      "name": "Phoenix, Arizona",
-      "latitude": "33.4483771",
-      "longitude": "-112.0740373",
-      "readings": []
-    },
-    {
-      "id": "e17ea270-ff63-11eb-9be9-cfaad2e0c9bb",
-      "userid": "3ad52697-6d98-4d80-8273-084de55a86c0",
-      "name": "Moscow",
-      "latitude": "55.7558260",
-      "longitude": "37.6172999",
-      "readings": []
     }
   ]
 }

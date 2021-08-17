@@ -8,19 +8,26 @@
 </div>
 <script>
   dataTemp = {
-    labels: [{{{commaseparatedlist station.readings "timestamp" "String"}}}],
+
+    labels: [{{#each station.readings}}
+      "{{isoTimeToLocale timestamp}}",
+      {{/each}}],
     datasets: [
       { values: [{{commaseparatedlist station.readings "temperature"}}] }
     ]
   };
   dataPressure = {
-    labels: [{{{commaseparatedlist station.readings "timestamp" "String"}}}],
+    labels: [{{#each station.readings}}
+      "{{isoTimeToLocale timestamp}}",
+    {{/each}}],
     datasets: [
       { values: [{{commaseparatedlist station.readings "pressure"}}] }
     ]
   };
   dataWindSpeed = {
-    labels: [{{{commaseparatedlist station.readings "timestamp" "String"}}}],
+    labels: [{{#each station.readings}}
+      "{{isoTimeToLocale timestamp}}",
+    {{/each}}],
     datasets: [
       { values: [{{commaseparatedlist station.readings "windSpeed"}}] }
     ]
@@ -40,7 +47,7 @@
     data: data,
     type: "line",
     height: 180,
-    colors: ["blue"]
+    colors: ["#00A4CC"]
   })
   }
   document.onload = document.getElementById("tempToggle").click()
