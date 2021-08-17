@@ -15,6 +15,24 @@
           "windDirection": "34",
           "pressure": "1000",
           "timestamp": "2021-08-02T14:59:13.920Z"
+        },
+        {
+          "id": "862387a0-ff64-11eb-9be9-cfaad2e0c9bb",
+          "code": "804",
+          "temperature": 26.1,
+          "windSpeed": 6.09,
+          "pressure": 1011,
+          "windDirection": 339,
+          "timestamp": "2021-08-17T14:07:57.431Z"
+        },
+        {
+          "id": "89ebb330-ff64-11eb-9be9-cfaad2e0c9bb",
+          "code": "804",
+          "temperature": 26.1,
+          "windSpeed": 6.09,
+          "pressure": 1011,
+          "windDirection": 339,
+          "timestamp": "2021-08-17T14:08:03.881Z"
         }
       ]
     },
@@ -68,6 +86,15 @@
           "pressure": 1011,
           "windDirection": 31,
           "timestamp": "2021-08-12T17:53:10.586Z"
+        },
+        {
+          "id": "5a1ccd50-ff47-11eb-bcc0-f7d350ef0a7e",
+          "code": "800",
+          "temperature": 37.84,
+          "windSpeed": 6,
+          "pressure": 1013,
+          "windDirection": 23,
+          "timestamp": "2021-08-17T10:39:08.050Z"
         }
       ]
     },
@@ -104,8 +131,60 @@
           "pressure": 1023,
           "windDirection": 296,
           "timestamp": "2021-08-16T15:03:57.412Z"
+        },
+        {
+          "id": "a04e1e00-ff51-11eb-a923-c59836a2f032",
+          "code": "804",
+          "temperature": 14.95,
+          "windSpeed": 4.74,
+          "pressure": 1023,
+          "windDirection": 289,
+          "timestamp": "2021-08-17T11:52:40.824Z"
+        },
+        {
+          "id": "ff2d3a00-ff51-11eb-a923-c59836a2f032",
+          "code": "200",
+          "temperature": "12",
+          "windSpeed": "13",
+          "windDirection": "14",
+          "pressure": "1000",
+          "timestamp": "2021-08-17T11:55:20.352Z"
         }
       ]
+    },
+    {
+      "id": "94460720-ff61-11eb-915c-470e4fff4821",
+      "userid": "3ad52697-6d98-4d80-8273-084de55a86c0",
+      "name": "Skibbereen",
+      "latitude": "51.5559244",
+      "longitude": "-9.2621303",
+      "readings": [
+        {
+          "id": "6ab6b9d0-ff62-11eb-9ec0-afba085760fb",
+          "code": "803",
+          "temperature": 17.86,
+          "windSpeed": 5,
+          "pressure": 1025,
+          "windDirection": 292,
+          "timestamp": "2021-08-17T13:52:52.386Z"
+        }
+      ]
+    },
+    {
+      "id": "d49853d0-ff63-11eb-9be9-cfaad2e0c9bb",
+      "userid": "3ad52697-6d98-4d80-8273-084de55a86c0",
+      "name": "Phoenix, Arizona",
+      "latitude": "33.4483771",
+      "longitude": "-112.0740373",
+      "readings": []
+    },
+    {
+      "id": "e17ea270-ff63-11eb-9be9-cfaad2e0c9bb",
+      "userid": "3ad52697-6d98-4d80-8273-084de55a86c0",
+      "name": "Moscow",
+      "latitude": "55.7558260",
+      "longitude": "37.6172999",
+      "readings": []
     }
   ]
 }

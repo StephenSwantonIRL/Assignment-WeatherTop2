@@ -1,6 +1,6 @@
 BODY
 {
-	background: url(/images/castanzo.png) -182px -184px / 1800px no-repeat fixed;
+	background: url(./images/castanzo.png) -182px -184px / 1800px no-repeat fixed;
 }
 .wt-blue
 {
@@ -123,6 +123,7 @@ H2.ui.header, H3.ui.header
 DIV.card .icon
 {
 	color: #00A4CC;
+	color: #787878;
 }
 A.ui.tiny.button
 {
@@ -136,6 +137,13 @@ BUTTON.ui.labeled.icon.button
 DIV.card .icon.big
 {
 	float: right;
+}
+DIV.card IMG
+{
+	filter: grayscale(100%) invert(1);
+	float: right;
+	position: relative;
+	top: -15px;
 }
 FORM DIV.fields DIV.field INPUT::placeholder, FORM.ui.stacked.segment.form INPUT::placeholder
 {

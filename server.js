@@ -30,7 +30,8 @@ app.engine(
         windchill: (temperature, windSpeed) => readingConversions.calculateWindChill(temperature,windSpeed),
         trend: (reading1,reading2,reading3) => stationAnalytics.determineTrend(reading1,reading2,reading3),
         trendicon: (reading1, reading2, reading3) => stationAnalytics.getTrendIcon(reading1,reading2,reading3),
-        commaseparatedlist: (array, property, dataType) => generalUtils.getNestedPropertyValuesFromArray(array,property, dataType)
+        commaseparatedlist: (array, property, dataType) => generalUtils.getNestedPropertyValuesFromArray(array,property, dataType),
+        isoTimeToLocale: (isoTime) => generalUtils.isoTimeStringToLocale(isoTime)
       }
       }
 
@@ -42,5 +43,5 @@ const routes = require("./routes");
 app.use("/", routes);
 
 const listener = app.listen(process.env.PORT || 4000, function() {
-  logger.info(`glitch-template-1 started on port ${listener.address().port}`);
+  logger.info(`Weather Top v2 started on port ${listener.address().port}`);
 });

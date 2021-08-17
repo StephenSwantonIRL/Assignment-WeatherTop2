@@ -40,7 +40,7 @@
 <script>
   function getLocation(){
     let location = document.getElementById("name").value
-    let apicall = 'http://localhost:4000/coords/'+location
+    let apicall = window.location.protocol+"//"+window.location.hostname+':'+window.location.port+"/coords/"+location
     fetch(apicall)
       .then(data => {
         return data.json()

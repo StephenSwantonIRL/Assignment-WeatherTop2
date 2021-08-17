@@ -16,6 +16,9 @@ const generalUtils = {
       }
     }
     return values
+  },
+  isoTimeStringToLocale(isoTime){
+    return new Date(isoTime).toLocaleString()
   }
   }
 
