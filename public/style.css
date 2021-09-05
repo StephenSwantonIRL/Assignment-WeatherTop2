@@ -6,6 +6,10 @@ BODY
 {
 	color: #00A4CC;
 }
+BUTTON#tempToggle.ui.button:focus, BUTTON#windSpeedToggle.ui.button:focus, BUTTON#pressureToggle.ui.button:focus
+{
+	color: #00A4CC;
+}
 .wt-emphasis
 {
 	font-style: italic;

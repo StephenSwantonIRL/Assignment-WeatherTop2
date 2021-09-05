@@ -23,7 +23,6 @@ const dashboard = {
           return 0
         }
       }
-
       let stations = _.orderBy(_.cloneDeep(stationStore.getUserStations(loggedInUser.id)), 'name', 'asc')
       for (let i = 0; i < stations.length; i++) {
         stations[i].maxAndMins = {}
@@ -55,7 +54,8 @@ const dashboard = {
         layout: 'dashboardlayout',
         mapZoom: mapCalculations.setInitialZoom(coords),
         centrelat: mapCalculations.centreMap(coords)[0],
-        centrelon: mapCalculations.centreMap(coords)[1]
+        centrelon: mapCalculations.centreMap(coords)[1],
+        mapboxtoken: process.env.MAPBOX
       }
       response.render("dashboard", viewData)
       logger.info(viewData);

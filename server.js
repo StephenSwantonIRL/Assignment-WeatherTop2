@@ -8,7 +8,7 @@ const fileUpload = require("express-fileupload");
 const readingConversions = require("./utils/readingconversions.js")
 const stationAnalytics = require("./utils/stationanalytics")
 const generalUtils = require("./utils/generalutils")
-
+require('dotenv').config()
 const app = express();
 app.use(cookieParser());
 const exphbs = require("express-handlebars");
