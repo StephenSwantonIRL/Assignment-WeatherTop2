@@ -53,8 +53,8 @@ const dashboard = {
         stationsempty: anyStations(stations),
         layout: 'dashboardlayout',
         mapZoom: mapCalculations.setInitialZoom(coords),
-        centrelat: mapCalculations.centreMap(coords)[0],
-        centrelon: mapCalculations.centreMap(coords)[1],
+        centrelat: stations.length>0 ? mapCalculations.centreMap(coords)[0]: null,
+        centrelon: stations.length>0 ? mapCalculations.centreMap(coords)[1]: null,
         mapboxtoken: process.env.MAPBOX
       }
       response.render("dashboard", viewData)
